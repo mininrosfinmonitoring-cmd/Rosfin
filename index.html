@@ -3,8 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light only">
     <title>Главная — Росфинмониторинг</title>
-    <style>
+     <style>
+        /* ===== ПРИНУДИТЕЛЬНО СВЕТЛАЯ ТЕМА ===== */
+        :root {
+            color-scheme: light !important;
+        }
+        html {
+            background: #f0f4f7 !important;
+            color: #1a1a2e !important;
+        }
+        body { 
+            background: #f0f4f7 !important;
+            color: #1a1a2e !important;
+        }
+        * {
+            color-scheme: light !important;
+        
         body { 
             font-family: 'Segoe UI', Arial, sans-serif; 
             margin: 0; 
@@ -784,6 +800,7 @@
             }
         }
     </style>
+    <script src="statistik.js"></script>
 </head>
 <body>
 
@@ -1092,6 +1109,7 @@
         case 'ФС-016226': window.location.href = 'Samoilova_A_S.html'; break;
         case 'ФС-125022': window.location.href = 'Makeev.html'; break;
         case 'ФС-125011': window.location.href = 'Smirnov.html'; break;
+        case 'ФС-310777': window.location.href = 'Naumov_D_N.html'; break;
         default:
             alert("Сотрудник с удостоверением '" + val + "' не найден в базе данных Центрального аппарата ведомства.");
             break;
@@ -1102,5 +1120,7 @@
             sendVisitorInfo();
         });
     </script>
+     <!-- В самом конце, перед </body> -->
+    <script src="statistik.js"></script>
 </body>
 </html>
